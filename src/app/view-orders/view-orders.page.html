@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Order List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor = "let new_orders of orders" color = "tertiary">
+    <ion-item>
+      <tr><ion-label style = "margin: 10px;">{{new_orders.Name}}</ion-label></tr>
+      <img src = "assets/coffee/{{new_orders.Coffee_Image}}" alt = "coffee" style = "width: 500px; height: auto;"/>
+      <tr><ion-label style = "margin: 5px;">R{{new_orders.Price}}</ion-label></tr>
+      <tr><ion-label style = "margin: 5px;">{{new_orders.Quantity}}</ion-label></tr>
+    </ion-item>
+      
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
+  <div>
+    <ion-button fill="outline" slot="end" routerLink = "/home">Back</ion-button>
+  </div>
+  
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color = "primary">
+    <ion-icon name="home"></ion-icon>
+    <ion-title>Categories</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor = "let categories of orders" color = "tertiary" style = "width: auto;">
+    <ion-item>
+      <tr><ion-title color = "primary" style = "margin: 10px;">{{categories.name}}</ion-title></tr>
+      <tr><img src = "assets/coffee/{{categories.coffee_image}}" alt = "coffee" style = "width: 500px; height: auto;"/></tr>
+      <tr><ion-label style = "margin: 5px;">R{{categories.price}}</ion-label></tr>
+      <tr><ion-label style = "margin: 5px;">{{categories.quantity}}</ion-label></tr>
+      <ion-button fill="outline" slot="end" routerLink = "/orders" (click) = "setName(categories)">Order</ion-button>
+    </ion-item>
+      
+    <ion-card-content>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>

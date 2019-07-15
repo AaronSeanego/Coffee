@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color = "primary">
+    <ion-title>Orders</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        {{Name}}
+        <ion-radio-group (ionChange) = "setSugar($event)">
+          <ion-list-header>
+            <ion-label>Sugar</ion-label>
+          </ion-list-header>
+      
+          <ion-item>
+            <ion-label>1 Spoons</ion-label>
+            <ion-radio slot="start" value= 1 checked></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>2 Spoons</ion-label>
+            <ion-radio slot="start" value= 2></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>3 Spoons</ion-label>
+            <ion-radio slot="start" value=  3></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+
+      <ion-list>
+          <ion-radio-group (ionChange) = "setMilk($milkEvent)">
+            <ion-list-header>
+              <ion-label>Milk</ion-label>
+            </ion-list-header>
+        
+            <ion-item>
+              <ion-label>Yes</ion-label>
+              <ion-radio slot="start" value="Yes" checked></ion-radio>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label>No</ion-label>
+              <ion-radio slot="start" value="No"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+
+        <ion-list>
+          <ion-list-header>
+            <ion-label>Quantity</ion-label>
+          </ion-list-header>
+
+          <ion-item>
+
+            <td>
+              <ion-button shape="round" style = "width: 70px;" (click) = "getMinusCounter();getTotal()">
+                <ion-icon name="close-circle-outline" (click) = "addQuantity()"></ion-icon>
+              </ion-button>
+            </td>
+            <td style = "margin-left: 10px; margin-right: 10px;">{{Quantity}}</td>
+            <td>
+              <ion-button shape="round" style = "width: 70px;" (click) = "getNewQuantity();getTotal()">
+                <ion-icon name="add-circle-outline"></ion-icon>
+              </ion-button>
+            </td>
+          </ion-item>
+        </ion-list>
+
+
+        <ion-item>
+          Total: R{{TotalPrice}}
+        </ion-item>
+
+        <ion-item>
+          <ion-button color="primary" routerLink = "/view-orders" (click) = "setMakeOrders()">Order</ion-button>
+        </ion-item>
+</ion-content>
