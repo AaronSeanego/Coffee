@@ -30,7 +30,7 @@
       </ion-list>
 
       <ion-list>
-          <ion-radio-group (ionChange) = "setMilk($milkEvent)">
+          <ion-radio-group (ionChange) = "setMilk($event)">
             <ion-list-header>
               <ion-label>Milk</ion-label>
             </ion-list-header>
@@ -69,7 +69,7 @@
         </ion-list>
 
 
-        <ion-item>
+        <ion-item style = "font-size: 30px;color: rgb(95,67,57);">
           Total: R{{TotalPrice}}
         </ion-item>
 

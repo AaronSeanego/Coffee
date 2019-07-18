@@ -1,5 +1,8 @@
 {
   "name": "Re:COFFEE",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "angular"
 }

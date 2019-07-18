@@ -1,21 +1,23 @@
 <ion-header style = "text-align: center;">
-  <ion-toolbar color = "primary">
+  <ion-toolbar color = "primary" fill = "clear">
     <ion-title>
       Re:COFFEE
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding" style = "text-align: center;margin-top: 100px;">
+<ion-content  class="background">
+  <div class="ion-padding" style = "text-align: center;margin-top: 10px;">
     <img src = "assets\1695933.png" alt = "re:coffee logo" width = "150px" height = "230px;"/>
     <h3>Re:COFFEE</h3>
   </div>
 
   <div style = "text-align: center;" class = "buttonSection">
     <p>
-      <ion-button color="primary" class = "place_order" routerLink = "/place-orders">Place Order</ion-button>
-      <ion-button color="primary" class = "show_order" routerLink = "/view-orders">Show Order</ion-button>
+      <ion-button color="primary" shape = "round" fill = "outline" class = "place_order" routerLink = "/place-orders">Place Order</ion-button>
+    </p>
+    <p>
+      <ion-button color="primary" shape = "round" class = "show_order" fill = "outline" routerLink = "/view-orders">Show Order</ion-button>
     </p>
   </div>
 </ion-content>
