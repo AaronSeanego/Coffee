@@ -55,13 +55,13 @@
           <ion-item>
 
             <td>
-              <ion-button shape="round" style = "width: 70px;" (click) = "getMinusCounter();getTotal()">
+              <ion-button color="primary" shape = "round" fill="outline" style = "width: 70px;" (click) = "getMinusCounter();getTotal()">
                 <ion-icon name="close-circle-outline" (click) = "addQuantity()"></ion-icon>
               </ion-button>
             </td>
             <td style = "margin-left: 10px; margin-right: 10px;">{{Quantity}}</td>
             <td>
-              <ion-button shape="round" style = "width: 70px;" (click) = "getNewQuantity();getTotal()">
+              <ion-button color="primary" shape = "round" fill="outline" style = "width: 70px;" (click) = "getNewQuantity();getTotal()">
                 <ion-icon name="add-circle-outline"></ion-icon>
               </ion-button>
             </td>
@@ -74,6 +74,6 @@
         </ion-item>
 
         <ion-item>
-          <ion-button color="primary" routerLink = "/view-orders" (click) = "setMakeOrders()">Order</ion-button>
+          <ion-button color="primary" shape = "round" fill="outline" routerLink = "/view-orders" (click) = "setMakeOrders()">Order</ion-button>
         </ion-item>
 </ion-content>
